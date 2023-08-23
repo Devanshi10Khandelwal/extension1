@@ -1,0 +1,10 @@
+function doPost(e) {
+  var recipient = e.parameters.recipient;
+      recipient = decodeURI(recipient);
+  var subject = e.parameters.subject;
+      subject = decodeURI(subject);
+  var body = e.parameters.body;
+      body = decodeURI(body);
+      
+  MailApp.sendEmail(recipient, subject, body);
+}
